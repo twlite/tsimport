@@ -1,0 +1,35 @@
+{
+  "name": "tsimport",
+  "version": "0.1.0",
+  "private": true,
+  "description": "import TypeScript files in JavaScript",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rimraf dist && tsc",
+    "test": "yarn build && cd test && node --loader ../dist/esm_hooks.js index.ts",
+    "tsimport": "node --loader=./dist/esm_hooks.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevAndromeda/tsimport.git"
+  },
+  "keywords": [
+    "typescript",
+    "import",
+    "nodejs",
+    "module"
+  ],
+  "author": "DevAndromeda",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DevAndromeda/tsimport/issues"
+  },
+  "homepage": "https://github.com/DevAndromeda/tsimport#readme",
+  "dependencies": {
+    "typescript": "^4.7.4"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "rimraf": "^3.0.2"
+  }
+}
